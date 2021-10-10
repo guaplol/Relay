@@ -38,9 +38,9 @@ print('[Relay Nuker] - Loading Scraped')
 os.system('clear')
 time.sleep(0.5)
 proxies = open('proxies.txt').read().split('\n')
-members = open('Scraped/members.txt').read().split('\n')
-channels = open('Scraped/channels.txt').read().split('\n')
-roles = open('Scraped/roles.txt').read().split('\n')
+members = open('members.txt').read().split('\n')
+channels = open('channels.txt').read().split('\n')
+roles = open('roles.txt').read().split('\n')
 
 
 
@@ -345,27 +345,27 @@ async def scrape(ctx):
     rolecount = 0
 
     try:
-        os.remove("Scraped/members.txt")
-        os.remove("Scraped/channels.txt")
-        os.remove("Scraped/roles.txt")
+        os.remove("members.txt")
+        os.remove("channels.txt")
+        os.remove("roles.txt")
     except:
         pass
 
-    with open('Scraped/members.okuru', 'a') as f:
+    with open('members.okuru', 'a') as f:
         ctx.guild.members
         for member in ctx.guild.members:
             f.write(str(member.id) + "\n")
             membercount += 1
         print(f"\u001b[38;5;21m[?]\u001b[38;5;15m Scraped \u001b[38;5;15m{membercount}\033[37m Members")
 
-    with open('Scraped/channels.okuru', 'a') as f:
+    with open('channels.okuru', 'a') as f:
         ctx.guild.channels
         for channel in ctx.guild.channels:
             f.write(str(channel.id) + "\n")
             channelcount += 1
         print(f"\u001b[38;5;21m[?]\u001b[38;5;15m Scraped \u001b[38;5;15m{channelcount}\033[37m Channels")
 
-    with open('Scraped/roles.okuru', 'a') as f:
+    with open('roles.okuru', 'a') as f:
         ctx.guild.roles
         for role in ctx.guild.roles:
             f.write(str(role.id) + "\n")
