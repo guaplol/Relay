@@ -1,0 +1,18 @@
+{
+    "General": {
+        "Prefix": "PREFIX",
+        "Token": "YOUR TOKEN HERE",
+        "Guild": 
+        "GUILD ID"
+    },
+    "Nuke":{
+        "Channel Names": ["NAME", "NAME"],
+        "Role Names": ["NAME", "NAME"]
+    },
+    "Webhook Spam":{
+        "Spam": true,
+        "Webhook Names": ["NAME", "NAME"],
+        "Message Contents": ["SPAM MESSAGE HERE"],
+        "Spam Amount": 300000
+    }
+}
